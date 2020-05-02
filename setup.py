@@ -35,7 +35,7 @@ setup(
     test_suite='test_socketio',
     entry_points={
         'console_scripts': [
-            'i_socketio=i_socketio.server:main'
+            'i_socketio=i_socketio.app:main'
         ],
     },
     classifiers=[
