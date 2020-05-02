@@ -11,7 +11,15 @@ Installation
 
 You can install this package as usual with pip:
 
-    pip install flask-socketio
+    pip install i-socketio
+    
+    
+    python setup.py register
+    python setup.py check
+    python setup.py sdist
+    python setup.py upload
+    python setup.py register sdist upload
+
 
 Example
 -------
