@@ -13,7 +13,8 @@ You can install this package as usual with pip:
 
     pip install i-socketio
     
-    
+    pip install git+https://github.com/xyz71148/i-socketio
+
     python setup.py register
     python setup.py check
     python setup.py sdist

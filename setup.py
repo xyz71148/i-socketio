@@ -33,6 +33,11 @@ setup(
         'coverage'
     ],
     test_suite='test_socketio',
+    entry_points={
+        'console_scripts': [
+            'i-socketio = i-socketio.server:main'
+        ],
+    },
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
