@@ -7,20 +7,20 @@ Socket.IO integration for Flask applications.
 import re
 from setuptools import setup
 
-with open('flask_socketio/__init__.py', 'r') as f:
+with open('i-socketio/__init__.py', 'r') as f:
     version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]',
                         f.read(), re.MULTILINE).group(1)
 
 setup(
-    name='Flask-SocketIO',
+    name='i-socketio',
     version=version,
-    url='http://github.com/miguelgrinberg/Flask-SocketIO/',
+    url='https://github.com/xyz71148/i-socketio.git',
     license='MIT',
-    author='Miguel Grinberg',
-    author_email='miguelgrinberg50@gmail.com',
+    author='tommy',
+    author_email='xyz71148@gmail.com',
     description='Socket.IO integration for Flask applications',
     long_description=__doc__,
-    packages=['flask_socketio'],
+    packages=['i_socketio'],
     zip_safe=False,
     include_package_data=True,
     platforms='any',
