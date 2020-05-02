@@ -116,6 +116,7 @@ def test_connect():
 def test_disconnect():
     print('Client disconnected', request.sid)
 
-
-if __name__ == '__main__':
+def main():
     socketio.run(app, debug=True)
+if __name__ == '__main__':
+    main()
