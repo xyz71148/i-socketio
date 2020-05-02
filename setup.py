@@ -20,7 +20,7 @@ setup(
     author_email='xyz71148@gmail.com',
     description='Socket.IO integration for Flask applications',
     long_description=__doc__,
-    packages=['i_socketio'],
+    packages=['i-socketio'],
     zip_safe=False,
     include_package_data=True,
     platforms='any',
