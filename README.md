@@ -1,7 +1,7 @@
 Flask-SocketIO
 ==============
 
-[![Build Status](https://travis-ci.org/xyz71148/i-socketio.png?branch=master)](https://travis-ci.org/xyz71148/i-socketio)
+[![Build Status](https://travis-ci.org/xyz71148/i_socketio.png?branch=master)](https://travis-ci.org/xyz71148/i_socketio)
 
 Socket.IO integration for Flask applications.
 
@@ -11,7 +11,7 @@ Installation
 
 You can install this package as usual with pip:
 
-    pip install i-socketio
+    pip install i_socketio
     
     pip install git+https://github.com/xyz71148/i-socketio
 
@@ -51,6 +51,6 @@ Resources
 - [Tutorial](http://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
 - [Documentation](http://flask-socketio.readthedocs.io/en/latest/)
 - [PyPI](https://pypi.python.org/pypi/Flask-SocketIO)
-- [Change Log](https://github.com/xyz71148/i-socketio/blob/master/CHANGES.md)
+- [Change Log](https://github.com/xyz71148/i_socketio/blob/master/CHANGES.md)
 - Questions? See the [questions](https://stackoverflow.com/questions/tagged/flask-socketio) others have asked on Stack Overflow, or [ask](https://stackoverflow.com/questions/ask?tags=python+flask-socketio+python-socketio) your own question.
 
