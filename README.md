@@ -8,6 +8,7 @@ Socket.IO integration for Flask applications.
 Installation
 ------------
 
+
 You can install this package as usual with pip:
 
     pip install flask-socketio
