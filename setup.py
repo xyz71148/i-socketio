@@ -11,6 +11,7 @@ with open('i_socketio/__init__.py', 'r') as f:
     version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]',
                         f.read(), re.MULTILINE).group(1)
 
+
 setup(
     name='i_socketio',
     version=version,
