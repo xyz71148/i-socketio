@@ -123,7 +123,12 @@ def test_disconnect():
     print('Client disconnected', request.sid)
 
 def main():
-    socketio.run(app, debug=True)
+    socketio.run(
+        app,
+        debug=True,
+        host=os.getenv("host","127.0.0.1"),
+        port=os.getenv("port","5000"),
+    )
 
 if __name__ == '__main__':
     main()
