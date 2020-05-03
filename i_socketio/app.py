@@ -5,6 +5,7 @@ from flask import Flask, render_template, session, request, \
 from flask_socketio import SocketIO, emit, join_room, leave_room, \
     close_room, rooms, disconnect
 from flask_cors import CORS
+import os
 
 APP_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_PATH = os.path.join(APP_PATH, 'templates/')
