@@ -13,6 +13,7 @@ You can install this package as usual with pip:
 
     pip install i_socketio
     
+    git add . && git commit -m "no msg" && git push origin master && \
     pip3 install git+https://github.com/xyz71148/i-socketio
 
     python setup.py register
