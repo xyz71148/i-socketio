@@ -4,25 +4,19 @@ from flask import Flask, render_template, session, request, \
     copy_current_request_context
 from flask_socketio import SocketIO, emit, join_room, leave_room, \
     close_room, rooms, disconnect
-from flask_cors import CORS
 import os
 
 APP_PATH = os.path.dirname(os.path.abspath(__file__))
-TEMPLATE_PATH = os.path.join(APP_PATH, 'templates/')
+TEMPLATE_PATH = os.path.join(APP_PATH, 'app/')
 print(TEMPLATE_PATH)
 # Set this variable to "threading", "eventlet" or "gevent" to test the
 # different async modes, or leave it set to None for the application to choose
 # the best option based on installed packages.
 async_mode = None
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder=TEMPLATE_PATH)
 app.config['SECRET_KEY'] = 'secret!'
-app.config['CORS_AUTOMATIC_OPTIONS'] = True
 
-
-cors = CORS(app, resources={
-    r"/*": {"origins": "*"}
-})
 socketio = SocketIO(async_mode=async_mode)
 socketio.init_app(app,cors_allowed_origins="*")
 thread = None
@@ -40,10 +34,10 @@ def background_thread():
                       namespace='/test')
 
 
-# @app.route('/')
-# def index():
-#     return render_template('index.html', async_mode=socketio.async_mode)
-#
+@app.route('/')
+def index():
+    return render_template('test.html', async_mode=socketio.async_mode)
+
 
 @socketio.on('my_event', namespace='/test')
 def test_message(message):
