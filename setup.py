@@ -23,6 +23,10 @@ setup(
     packages=['i_socketio'],
     zip_safe=False,
     include_package_data=True,
+    package_data={
+        # If any package contains *.txt or *.rst files, include them:
+        "": ["*.html"],
+    },
     platforms='any',
     install_requires=[
         'Flask>=0.9',
