@@ -27,6 +27,12 @@ def background_thread():
                       {'data': 'Server generated event', 'count': count},
                       namespace='/test')
 
+
+@app.route('/')
+def index():
+    return render_template('index.html', async_mode=socketio.async_mode)
+
+
 @socketio.on('my_event', namespace='/test')
 def test_message(message):
     session['receive_count'] = session.get('receive_count', 0) + 1
