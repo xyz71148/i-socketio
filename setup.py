@@ -27,7 +27,8 @@ setup(
     install_requires=[
         'Flask>=0.9',
         'flask_socketio',
-        'python-socketio>=4.3.0'
+        'python-socketio>=4.3.0',
+        'flask-cors'
     ],
     tests_require=[
         'coverage'
