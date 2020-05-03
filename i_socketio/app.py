@@ -7,7 +7,7 @@ from flask_socketio import SocketIO, emit, join_room, leave_room, \
 import os
 
 APP_PATH = os.path.dirname(os.path.abspath(__file__))
-TEMPLATE_PATH = os.path.join(APP_PATH, 'app/')
+TEMPLATE_PATH = os.path.join(APP_PATH, 'templates/')
 print(TEMPLATE_PATH)
 # Set this variable to "threading", "eventlet" or "gevent" to test the
 # different async modes, or leave it set to None for the application to choose
