@@ -7,7 +7,7 @@ from flask_socketio import SocketIO, emit, join_room, leave_room, \
 from flask_cors import CORS
 import os
 
-APP_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+APP_PATH = os.path.dirname(os.path.abspath(__file__))
 TEMPLATE_PATH = os.path.join(APP_PATH, 'templates/')
 print(TEMPLATE_PATH)
 # Set this variable to "threading", "eventlet" or "gevent" to test the
@@ -15,12 +15,16 @@ print(TEMPLATE_PATH)
 # the best option based on installed packages.
 async_mode = None
 
-app = Flask(__name__, template_folder=APP_PATH)
+app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
+app.config['CORS_AUTOMATIC_OPTIONS'] = True
+
+
 cors = CORS(app, resources={
-    r"/api/*": {"origins": "*"}
+    r"/*": {"origins": "*"}
 })
-socketio = SocketIO(app, async_mode=async_mode)
+socketio = SocketIO(async_mode=async_mode)
+socketio.init_app(app,cors_allowed_origins="*")
 thread = None
 thread_lock = Lock()
 
